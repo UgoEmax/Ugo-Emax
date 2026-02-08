@@ -20,7 +20,7 @@ const ProjectProp = () => {
      Heading="Next.js Practice Project"
      Paragraph="This project was built using Next.js to explore modern React-based development. It demonstrates component-based architecture, routing, and improved performance through Next.js features. This project helped me understand how modern frontend frameworks are used in real-world applications."
      Tech={[
-      "Next.js", "JavaScript", "TailwindCSS"
+      "Next.js", "JavaScript", "TailwindCSS", "framer-motion"
      ]}
      Images="/images/maximum-home.jpg"
      Button="https://maximumhomes.vercel.app/"
