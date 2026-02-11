@@ -47,7 +47,7 @@ const Contact = () => {
     }
 
   return (
-    <div className="pt-20 pb-10">
+    <div className="pt-20 pb-10" id="contact">
       <h2 className="text-2xl font-bold mb-4 text-amber-400">Contact Me</h2>
       <p className='tracking-wide'>I'm open to internship opportunities, junior frontend roles, collaborations, and freelance projects. Feel free to send me a message </p>
 

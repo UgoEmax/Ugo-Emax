@@ -2,7 +2,7 @@ import Projects from "./Projects"
 
 const ProjectProp = () => {
   return (
-    <div className="pt-25 pb-10">
+    <div className="pt-25 pb-10" id="projects">
         <h3 className='text-2xl font-bold mb-4 text-amber-400 text-center'>Projects</h3>
 
       <Projects 
