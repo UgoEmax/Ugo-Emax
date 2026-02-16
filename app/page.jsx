@@ -7,13 +7,13 @@ import Contact from "./components/Contact";
 
 const page = () => {
   return (
-    <div className="px-4 bg-black/87 text-white box-border antialiased md:px-15">
+    <div className="px-4 bg-black/87 text-white box-border antialiased md:px-25">
      <Hero />
      <About />
      <Skill />
      <ProjectProp />
-      <Growth />
-      <Contact />
+     <Growth />
+     <Contact />
     </div>
   )
 }

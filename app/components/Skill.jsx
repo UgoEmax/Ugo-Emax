@@ -9,10 +9,10 @@ import { DiResponsive } from "react-icons/di";
 
 const Skill = () => {
   return (
-    <div className='pt-20 pb-10' id="skills">
-      <h3 className='text-2xl font-bold mb-4 pb-10 text-amber-400'>Skills & Technologies</h3>
+    <div className='pt-20 pb-10 md:pt-40' id="skills">
+      <h3 className='text-2xl font-bold mb-4 pb-10 text-amber-400 md:text-center'>Skills & Technologies</h3>
 
-      <div className="flex flex-wrap gap-10 text-6xl justify-center items-center text-center text-gray-300">
+      <div className="flex flex-wrap gap-10 text-6xl justify-center items-center text-center text-gray-300 md:text-8xl md:gap-15 md:pt-10">
 
       <div className="flex flex-col items-center">
         <FaHtml5 />

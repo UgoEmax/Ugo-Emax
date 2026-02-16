@@ -47,9 +47,10 @@ const Contact = () => {
     }
 
   return (
-    <div className="pt-20 pb-10" id="contact">
-      <h2 className="text-2xl font-bold mb-4 text-amber-400">Contact Me</h2>
-      <p className='tracking-wide'>I'm open to internship opportunities, junior frontend roles, collaborations, and freelance projects. Feel free to send me a message </p>
+    <div className="pt-20 pb-10 md:pt-50 md:grid justify-center" id="contact">
+      <div className="md:max-w-3xl md:pb-20">
+      <h2 className="text-2xl font-bold mb-4 text-amber-400 md:pb-4 md:text-center">Contact Me</h2>
+      <p className='tracking-wider md:text-[1.1rem] md:leading-relaxed]'>I'm open to internship opportunities, junior frontend roles, collaborations, and freelance projects. Feel free to send me a message </p>
 
       <div className="mt-10">
       <form action="https://formsubmit.co/28481391347b8dfe4421014691f1a276" method="POST" onSubmit={handleSubmit}>
@@ -59,6 +60,7 @@ const Contact = () => {
           <label htmlFor="name" className="block text-amber-200 mb-2">Name</label>
           <input
             type="text"
+            placeholder="Enter Your Name"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -70,6 +72,7 @@ const Contact = () => {
           <label htmlFor="email" className="block text-amber-200 mb-2">Email</label>
           <input
             type="text"
+            placeholder="Enter Your Email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -81,6 +84,7 @@ const Contact = () => {
           <label htmlFor="message" className="block text-amber-200 mb-2">Message</label>
           <textarea
             id="message"
+            placeholder="Your Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={5}
@@ -98,8 +102,9 @@ const Contact = () => {
           {success}
         </div>
       )}
+      </div>
 
-      <div className="flex space-x-8 mt-4 text-4xl text-amber-200 justify-center pt-10">
+      <div className="flex space-x-8 mt-4 text-4xl text-amber-200 justify-center pt-10 md:space-x-12">
       <Link href="https://www.facebook.com/ugo.hemmy" target="_blank"><FaFacebook /></Link>
       <Link href="https://www.linkedin.com/in/ugo-ehemmy-700215248/" target="_blank"><FaLinkedin /></Link>
       <Link href="https://wa.me/2348103695793" target="_blank"><IoLogoWhatsapp /></Link>
