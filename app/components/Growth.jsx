@@ -11,14 +11,14 @@ const Growth = () => {
     const element1 = document.querySelectorAll(".growth-element");
     
     gsap.from(element1, {
-      opacity: 0, x: -30, duration: 1, stagger: 0.3, ease: "power2.out",
+      opacity: 0, x: -30, duration: 1.5, stagger: 0.3, ease: "power2.out",
       scrollTrigger: {
         trigger: ".growth-section", start: "top 80%", toggleActions: "play none none reset",
       }
     })
     
     gsap.from('.image-element', {
-      opacity: 0, x: 30, duration: 1, stagger: 0.3, ease: "power2.out",
+      opacity: 0, x: 30, duration: 2, stagger: 0.3, ease: "power2.out",
       scrollTrigger: {
         trigger: ".img", start: "top 80%", toggleActions: "play none none reset",
       }
@@ -26,7 +26,7 @@ const Growth = () => {
   }, [])
 
   return (
-    <div className="pt-30 pb-10 flex flex-col items-center justify-center growth-section" id='growth'>
+    <div className="pt-10 pb-20 md:pb-50 flex flex-col items-center justify-center growth-section" id='growth'>
       <div className='md:flex md:flex-row md:gap-25'>
       <div className='md:max-w-xl md:translate-y-15'>
       <h2 className="text-2xl font-bold mb-4 text-amber-400 pb-10 md:text-center growth-element">Learning & Growth</h2>

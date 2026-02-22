@@ -5,8 +5,32 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+
+   useGSAP(() => {
+      
+          const element = document.querySelectorAll(".link-animate");
+          
+          gsap.from('.contact-animate', {
+            opacity: 0.3, y: 80, duration: 1, stagger: 0.3, ease: "power2.out",
+            scrollTrigger: {
+              trigger: ".contact-section", start: "top 100%", toggleActions: "play none none reset",
+            }
+          })
+
+          gsap.from(element, {
+            opacity: 0, x: 30, duration: 1.5, stagger: 0.5, ease: "power2.out",
+            scrollTrigger: {
+              trigger: ".link-section", start: "top 80%", toggleActions: "play none none reset",
+            }
+          })
+        }, [])
+
     const [ name, setName ] = useState('')
     const [ email, setEmail ] = useState('')
     const [ message, setMessage ] = useState('')
@@ -47,8 +71,8 @@ const Contact = () => {
     }
 
   return (
-    <div className="pt-20 pb-10 md:pt-50 md:grid justify-center" id="contact">
-      <div className="md:max-w-3xl md:pb-20">
+    <div className="pt-10 pb-20 md:grid justify-center" id="contact">
+      <div className="md:max-w-3xl md:pb-20 contact-section contact-animate">
       <h2 className="text-2xl font-bold mb-4 text-amber-400 md:pb-4 md:text-center">Contact Me</h2>
       <p className='tracking-wider md:text-[1.1rem] md:leading-relaxed]'>I'm open to internship opportunities, junior frontend roles, collaborations, and freelance projects. Feel free to send me a message </p>
 
@@ -104,11 +128,11 @@ const Contact = () => {
       )}
       </div>
 
-      <div className="flex space-x-8 mt-4 text-4xl text-amber-200 justify-center pt-10 md:space-x-12">
-      <Link href="https://www.facebook.com/ugo.hemmy" target="_blank"><FaFacebook /></Link>
-      <Link href="https://www.linkedin.com/in/ugo-ehemmy-700215248/" target="_blank"><FaLinkedin /></Link>
-      <Link href="https://wa.me/2348103695793" target="_blank"><IoLogoWhatsapp /></Link>
-      <a href="mailto:ugohemmy@gmail.com"><MdEmail /></a>
+      <div className="flex space-x-8 mt-4 text-4xl text-amber-200 justify-center pt-10 md:space-x-12 link-section">
+      <Link href="https://www.facebook.com/ugo.emax" target="_blank" className="link-animate"><FaFacebook /></Link>
+      <Link href="https://www.linkedin.com/in/emmanuel-ugochukwu-44885a191/" target="_blank" className="link-animate"><FaLinkedin /></Link>
+      <Link href="https://wa.me/qr/QFGCPN2FLS5SK1" target="_blank" className="link-animate"><IoLogoWhatsapp /></Link>
+      <a href="mailto:ugohemmy@gmail.com" className="link-animate"><MdEmail /></a>
       </div>
     </div>
   )

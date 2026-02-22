@@ -1,9 +1,24 @@
+'use client';
 import Projects from "./Projects"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const ProjectProp = () => {
+  useGSAP(() => {
+       
+    gsap.from(".heading", {
+      opacity: 0, x: -30, duration: 1, stagger: 0.3, ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".heading-section", start: "top 80%", toggleActions: "play none none reset",
+      }
+    })
+  }, [])
+
   return (
-    <div className="pt-25 pb-10 md:pt-50" id="projects">
-        <h3 className='text-2xl font-bold mb-4 text-amber-400 text-center'>Projects</h3>
+    <div className="pt-10 md:pt-50 heading-section">
+        <h3 className='text-2xl font-bold mb-4 text-amber-400 text-center heading'>Projects</h3>
 
     <div className="md:flex md:gap-15 pb-10">
       <div>
