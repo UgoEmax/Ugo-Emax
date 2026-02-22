@@ -17,7 +17,7 @@ const ProjectProp = () => {
   }, [])
 
   return (
-    <div className="pt-10 md:pt-50 heading-section">
+    <div className="pt-10 md:pt-50 heading-section" id="projects">
         <h3 className='text-2xl font-bold mb-4 text-amber-400 text-center heading'>Projects</h3>
 
     <div className="md:flex md:gap-15 pb-10">
