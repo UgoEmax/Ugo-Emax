@@ -86,6 +86,7 @@ const Contact = () => {
             type="text"
             placeholder="Enter Your Name"
             id="name"
+            name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full p-2 rounded bg-gray-800 border border-amber-400 text-white outline-none"
@@ -98,6 +99,7 @@ const Contact = () => {
             type="text"
             placeholder="Enter Your Email"
             id="email"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full p-2 rounded bg-gray-800 border border-amber-400 text-white outline-none"
@@ -108,6 +110,7 @@ const Contact = () => {
           <label htmlFor="message" className="block text-amber-200 mb-2">Message</label>
           <textarea
             id="message"
+            name="message"
             placeholder="Your Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}

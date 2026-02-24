@@ -22,7 +22,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <div className='w-full h-[100vh] flex flex-col justify-center items-center text-center pt-60 pb-5 hero-section'>
+    <div className='w-full flex flex-col justify-center items-center text-center pt-30 pb-5 hero-section'>
       <h1 className="text-2xl font-bold mb-4 animate-element">Hi, I'm <span className="text-amber-400">Ugo Emax</span></h1>
       <h2 className="text-xl mb-3 bg-amber-400 text-black p-2 rounded-md animate-element">Frontend Web Developer</h2>
       <Image src="/images/portfolio.png" alt='My Photo' width={350} height={300} className="rounded-full animate-element" />
